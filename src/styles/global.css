@@ -44,6 +44,7 @@ h1 {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
+    width: 100%;
 }
 
 .nav-links a:hover,
@@ -58,7 +59,7 @@ h1 {
 @media screen and (min-width: 932px) {
     .nav-links {
         display: block;
-        width: auto;
+        width: 100%;
         background: #c79080; /* backgruond color to see */
     }
 
