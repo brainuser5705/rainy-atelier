@@ -1,0 +1,74 @@
+h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    float: right;
+  }
+
+/* header styles */
+.left-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: left;
+    width: 20%;
+    height: 100%;
+    background: rgb(185, 169, 169); /* color to  see */
+}
+
+/* nav styles */
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #ff9776;
+}
+
+.nav-links {
+    width: 100%;
+    top: 5rem;
+    background-color: #ff9776;
+    display: none;
+    margin: 0;
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #ff9776;
+}
+
+.expanded {
+    display: unset;
+}
+
+@media screen and (min-width: 932px) {
+    .nav-links {
+        display: block;
+        width: auto;
+        background: #c79080; /* backgruond color to see */
+    }
+
+    .nav-links a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+
+
+    .hamburger {
+        display: none;
+    }
+}
