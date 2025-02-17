@@ -24,19 +24,20 @@ footer {
     position: fixed; /* sets navbar to the left */
     top: 0;
     left: 0;
-    width: 15%; 
+    width: 10%; 
     height: 100vh; /* full screen height */
+    font-size: 100%;
 }
 
 .nav-logo img {
     max-width: 100%;
-    max-height: 250px;
+    max-height: 300px; /* manually set max height */
     width: auto;
     height: auto;
 }
 
 .nav-logo p {
-    font-size: 1rem;
+    font-size: 1em;
     text-align: center;
 }
 
@@ -51,7 +52,7 @@ footer {
 }
 
 .nav-links a.concept {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     word-wrap: break-word;
     color: orange
 }
@@ -59,7 +60,7 @@ footer {
 .nav-links a:hover,
 .nav-links a:focus {
     color: black;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* show the hamburger and hide navbar on small screens */
@@ -84,6 +85,6 @@ footer {
     }
 
     body {
-        margin-left: 200px; /* this treats navbar as the "left edge" */
+        margin-left: 10%; /* this treats navbar as the "left edge" */
     }
 }
