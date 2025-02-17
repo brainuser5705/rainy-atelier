@@ -17,8 +17,20 @@
     position: fixed; /* sets navbar to the left */
     top: 0;
     left: 0;
-    width: 200px; /* can set to 200 for now */
+    width: 15%; 
     height: 100vh; /* full screen height */
+}
+
+.nav-logo img {
+    max-width: 100%;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+}
+
+.nav-logo p {
+    font-size: 1rem;
+    text-align: center;
 }
 
 .nav-links a {
@@ -26,14 +38,21 @@
     padding: 15px;
     text-align: left;
     text-decoration: none;
-    font-size: 6vm;
+    font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
 }
 
+.nav-links a.concept {
+    font-size: 1.5em;
+    word-wrap: break-word;
+    color: orange
+}
+
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #ff9776;
+    color: black;
+    transform: scale(1.1);
 }
 
 /* show the hamburger and hide navbar on small screens */
