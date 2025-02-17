@@ -1,3 +1,10 @@
+/* footer styles */
+footer {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
 /* nav styles */
 .hamburger {
     padding-right: 20px;
