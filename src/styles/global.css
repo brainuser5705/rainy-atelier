@@ -1,0 +1,90 @@
+/* footer styles */
+footer {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* nav styles */
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #ff9776;
+}
+
+
+.nav-links {
+    position: fixed; /* sets navbar to the left */
+    top: 0;
+    left: 0;
+    width: 10%; 
+    height: 100vh; /* full screen height */
+    font-size: 100%;
+}
+
+.nav-logo img {
+    max-width: 100%;
+    max-height: 300px; /* manually set max height */
+    width: auto;
+    height: auto;
+}
+
+.nav-logo p {
+    font-size: 1em;
+    text-align: center;
+}
+
+.nav-links a {
+    display: block;
+    padding: 15px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links a.concept {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    color: orange
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: black;
+    transform: scale(1.05);
+}
+
+/* show the hamburger and hide navbar on small screens */
+@media screen and (max-width: 931px) {
+    .hamburger {
+        display: block; 
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
+
+/* show the navbar on large screens */
+@media screen and (min-width: 932px) {
+    .nav-links {
+        display: block;
+    }
+
+    .hamburger {
+        display: none; 
+    }
+
+    body {
+        margin-left: 10%; /* this treats navbar as the "left edge" */
+    }
+}
