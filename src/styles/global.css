@@ -46,15 +46,27 @@ footer {
     padding: 15px;
     text-align: left;
     text-decoration: none;
-    font-size: 1rem;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .nav-links a.concept {
-    font-size: 1.5rem;
-    word-wrap: break-word;
-    color: orange
+    font-size: 2rem;
+    color: orange;
+    text-transform: uppercase;
+}
+
+.project-title {
+    font-style: "lowercase";
+    font-size: 1rem;
+}
+
+.side-content {
+    font-family: "helvetica";
+    white-space: nowrap;
+    width:200px;
+}
+.line-two {
+    display: block;
 }
 
 .nav-links a:hover,
@@ -62,6 +74,7 @@ footer {
     color: black;
     transform: scale(1.05);
 }
+
 
 /* show the hamburger and hide navbar on small screens */
 @media screen and (max-width: 931px) {
