@@ -1,0 +1,8 @@
+---
+const { heading } = Astro.props;
+---
+
+<section>
+    <h1>{heading.toUpperCase()}</h1>
+    <slot />
+</section>
