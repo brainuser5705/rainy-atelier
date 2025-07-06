@@ -1,3 +1,4 @@
 document.querySelector('.hamburger').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('expanded');
+    document.querySelector('#main-display').classList.toggle('hidden');
+    document.querySelector('#main-popup').classList.toggle('hidden');
 });

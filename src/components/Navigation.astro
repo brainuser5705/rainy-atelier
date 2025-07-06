@@ -1,12 +1,29 @@
 ---
+const { id } = Astro.props
 ---
-<div class="nav-links">
-    <div class="nav-logo">
-        <a href="/">
-            <img src="/assets/logo.png" alt="Logo" />
-        </a>
-        <p>welcome to my rainy atelier</p>
-    </div>
+<style>
+
+.nav-links a {
+    display: block;
+    padding: 15px;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a.concept {
+    font-size: 2rem;
+    color: orange;
+    text-transform: uppercase;
+}
+
+#sidebar {
+    font-family: "helvetica";
+    white-space: nowrap;
+    width:200px;
+}
+</style>
+<div class="nav-links" id=`${id}`>
     <a href="/" class="concept">Concept / Visdev</a>
     <a href="/projects">Projects</a>
     <a href="/bgs">Backgrounds</a>

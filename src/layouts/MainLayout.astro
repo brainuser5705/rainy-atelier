@@ -1,4 +1,5 @@
 ---
+import Navigation from "../components/Navigation.astro";
 import SideMenu from "../components/SideMenu.astro";
 import "../styles/global.css";
 
@@ -15,8 +16,13 @@ const { pageTitle } = Astro.props; // a MainLayout accepts a page title
         <title>Jenny Lin{pageTitle ? ` - ${pageTitle}` : ""}</title>
     </head>
     <body>
-        <SideMenu />
-        <slot />
+        <div id="main-popup" class="hidden">
+            <Navigation />
+        </div>
+        <div id="main-display">
+            <SideMenu />
+            <slot />
+        </div>
         <script>
             import "../scripts/menu.js";
         </script>
