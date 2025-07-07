@@ -18,12 +18,10 @@
 }
 
 .category {
-    font-size: 30px;
+    font-size: 25px;
     text-transform: uppercase;
-    font-weight:700px;
 }
 
 .project {
-    font-size: 25px;
-    font-weight: 600px;
+    font-size: 20px;
 }

@@ -1,6 +1,11 @@
 ---
 const { platform, username } = Astro.props;
 ---
+<style>
+   .fab fa-${platform}:hover {
+    
+   }
+</style>
 <a href={`https://www.${platform}.com/${username}`}>
-    <i class=`fab fa-${platform} fa-2x` style="color: black;"></i>
+    <i class=`fab fa-${platform} fa-2x` style="color: white;"></i>
 </a>

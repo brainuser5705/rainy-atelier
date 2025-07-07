@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Futura";
+    src: url('public/assets/fonts/futura/Futura.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: 'Futura';
+}
+
 /* footer styles */
 footer {
     color: white;
