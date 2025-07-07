@@ -20,30 +20,6 @@ footer {
 }
 
 
-.nav-links {
-    position: fixed; /* sets navbar to the left */
-    top: 0;
-    left: 0;
-    width: 10%; 
-    height: 100vh; /* full screen height */
-    font-size: 100%;
-}
-
-.nav-logo img {
-    max-width: 100%;
-    max-height: 300px; /* manually set max height */
-    width: auto;
-    height: auto;
-}
-
-
-
-.project-title {
-    font-style: "lowercase";
-    font-size: 1rem;
-}
-
-
 .line-two {
     display: block;
 }
@@ -56,11 +32,6 @@ footer {
 
 .hidden {
     display: none;
-}
-
-.nav-logo p {
-    font-size: 1em;
-    text-align: center;
 }
 
 
@@ -78,14 +49,10 @@ footer {
 /* show the navbar on large screens */
 @media screen and (min-width: 932px) {
     #main-navigation {
-        display: block;
+        display: unset;
     }
 
     .hamburger {
         display: none; 
-    }
-
-    body {
-        margin-left: 10%; /* this treats navbar as the "left edge" */
     }
 }
