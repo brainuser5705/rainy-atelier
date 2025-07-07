@@ -5,6 +5,13 @@ footer {
     padding: 1rem;
 }
 
+body {
+    background-image: url("../public/assets/rain-background.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
 /* nav styles */
 .hamburger {
     padding-right: 20px;
@@ -26,7 +33,7 @@ footer {
 
 .nav-links a:hover,
 .nav-links a:focus {
-    color: black;
+    color: #CFFFFe;
     transform: scale(1.05);
 }
 

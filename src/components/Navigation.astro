@@ -22,12 +22,17 @@ const { id } = Astro.props
     white-space: nowrap;
     width:200px;
 }
+
+a {
+    color:rgb(238, 238, 238);
+}
+
 </style>
 <div class="nav-links" id=`${id}`>
     <a href="/" class="category">Concept / Visdev</a>
-    <a href="/projects">Projects</a>
-    <a href="/bgs">Backgrounds</a>
-    <a href="/characterdesign">Character Design</a>
+    <a href="/projects" class="project">Projects</a>
+    <a href="/bgs" class="project">Backgrounds</a>
+    <a href="/characterdesign" class="project">Character Design</a>
     <a href="/personal" class="category">Personal</a>
     <a href="/contact" class="category">About & Contact</a>
 </div>
