@@ -27,18 +27,22 @@ a {
     color:rgb(238, 238, 238);
 }
 
-.active {
-    color: red;
+.active{
+    color: yellow;
 }
 
+.active:hover{
+    color: yellow;
+}
 
 </style>
 <div class="nav-links" id=`${id}`>
     {pageSelected}
-    <a href="/" class="category" id="concept" class:list={[{active: pageSelected}]}>Concept / Visdev</a>
-    <a href="/projects" id="projects" class:list={['project', {active: pageSelected === "projects"}]}>Projects</a>
-    <a href="/bgs" class="project" id="backgrounds" class:list={[{active: pageSelected}]}>Backgrounds</a>
-    <a href="/characterdesign" class="project" id="characterdesign" class:list={[{active: pageSelected}]}>Character Design</a>
-    <a href="/personal" class="category" id="personal" class:list={[{active: pageSelected}]}>Personal</a>
-    <a href="/contact" class="category" id="about" class:list={[{active: pageSelected}]}>About & Contact</a>
+    {pageSelected == "projects"}
+    <a href="/" class="category" id="concept" class:list={[{active: pageSelected == "concept"}]}>Concept / Visdev</a>
+    <a href="/projects" id="projects" class:list={['project', {active: pageSelected == "projects"}]}>Projects</a>
+    <a href="/bgs" class="project" id="backgrounds" class:list={[{active: pageSelected == "bgs"}]}>Backgrounds</a>
+    <a href="/characterdesign" class="project" id="characterdesign" class:list={[{active: pageSelected == "characterdesign"}]}>Character Design</a>
+    <a href="/personal" class="category" id="personal" class:list={[{active: pageSelected == "personal"}]}>Personal</a>
+    <a href="/contact" class="category" id="about" class:list={[{active: pageSelected == "contact"}]}>About & Contact</a>
 </div>
