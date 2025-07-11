@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation.astro";
 import SideMenu from "../components/SideMenu.astro";
 import "../styles/global.css";
 
-const { pageTitle } = Astro.props; // a MainLayout accepts a page title
+const { pageTitle, pageSelected } = Astro.props; // a MainLayout accepts a page title
 ---
 
 <html lang="en">
@@ -20,7 +20,7 @@ const { pageTitle } = Astro.props; // a MainLayout accepts a page title
             <Navigation />
         </div>
         <div id="main-display">
-            <SideMenu />
+            <SideMenu pageSelected={pageSelected}/>
             <slot />
         </div>
         <script>

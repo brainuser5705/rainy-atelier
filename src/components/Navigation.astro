@@ -1,5 +1,5 @@
 ---
-const { id } = Astro.props
+const { id, pageSelected } = Astro.props
 ---
 <style>
 
@@ -27,12 +27,18 @@ a {
     color:rgb(238, 238, 238);
 }
 
+.active {
+    color: red;
+}
+
+
 </style>
 <div class="nav-links" id=`${id}`>
-    <a href="/" class="category">Concept / Visdev</a>
-    <a href="/projects" class="project">Projects</a>
-    <a href="/bgs" class="project">Backgrounds</a>
-    <a href="/characterdesign" class="project">Character Design</a>
-    <a href="/personal" class="category">Personal</a>
-    <a href="/contact" class="category">About & Contact</a>
+    {pageSelected}
+    <a href="/" class="category" id="concept" class:list={[{active: pageSelected}]}>Concept / Visdev</a>
+    <a href="/projects" id="projects" class:list={['project', {active: pageSelected === "projects"}]}>Projects</a>
+    <a href="/bgs" class="project" id="backgrounds" class:list={[{active: pageSelected}]}>Backgrounds</a>
+    <a href="/characterdesign" class="project" id="characterdesign" class:list={[{active: pageSelected}]}>Character Design</a>
+    <a href="/personal" class="category" id="personal" class:list={[{active: pageSelected}]}>Personal</a>
+    <a href="/contact" class="category" id="about" class:list={[{active: pageSelected}]}>About & Contact</a>
 </div>
