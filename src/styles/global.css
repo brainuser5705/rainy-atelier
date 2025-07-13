@@ -1,12 +1,13 @@
 @font-face {
     font-family: "Futura";
-    src: url('public/assets/fonts/futura/Futura.ttf');
+    src: url('fonts/futura/Futura.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 html {
-    font-family: 'Futura';
+    font-family: "Futura";
+    font-weight: bold;
 }
 
 /* footer styles */
@@ -17,7 +18,7 @@ footer {
 }
 
 body {
-    background-image: url("../public/assets/rain-background.png");
+    background-image: url("assets/rain-background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
