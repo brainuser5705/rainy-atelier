@@ -1,21 +1,19 @@
 ---
-import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
 import Social from './Social.astro';
 import "../styles/sidemenu.css";
 
 const { pageSelected } = Astro.props
 ---
-<header id="side-bar">
+<header class="sidemenu">
+  <div class="nav-logo">
+    <a href="/">
+        <img src="/assets/logo.png" alt="Logo" />
+    </a>
+    <p>welcome to my rainy atelier</p>
+  </div>
   <nav>
-    <Hamburger />
-    <div class="nav-logo">
-        <a href="/">
-            <img src="/assets/logo.png" alt="Logo" />
-        </a>
-        <p>welcome to my rainy atelier</p>
-    </div>
-    <Navigation pageSelected={pageSelected} class="main-navigation"/>
+    <Navigation pageSelected={pageSelected} />
   </nav>
   <Social platform="instagram" username="rainy.atelier" />
 </header>

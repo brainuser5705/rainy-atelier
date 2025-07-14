@@ -31,20 +31,15 @@ footer {
 
 /* navigation styles */
 .hamburger {
-    padding-right: 20px;
+    width: 30px;
     cursor: pointer;
 }
 
 .hamburger .line {
     display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
-}
-
-.hidden {
-    display: none;
+    height: 4px;
+    margin-bottom: 4px;
+    background-color: #334C4F;
 }
 
 /* show the hamburger and hide navbar on small screens */
@@ -53,11 +48,11 @@ footer {
         display: block; 
     }
     
-    .main-navigation {
+    nav {
         display: none;
     }
 
-    .main-content {
+    .landing-content {
         display: none;
     }
 }
@@ -68,17 +63,17 @@ footer {
         display: none; 
     }
 
-    .main-navigation {
+    nav {
         display: initial;
     }
 
-    .main-content {
+    .landing-content {
         float: left;
         display: block;
         width: 85%;
     }
 
-    .main-buffer {
+    .landing-buffer {
         width: 97%;
         margin-left: 3%;
     }
@@ -118,4 +113,8 @@ footer {
 
     clear: both;
     display: block;
+}
+
+.hidden {
+    display: none !important;
 }
