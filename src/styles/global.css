@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Futura";
-    src: url('fonts/futura/Futura.ttf');
+    src: url('/fonts/futura/Futura.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background-image: url("assets/rain-background.png");
+    background-image: url("/assets/rain-background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -82,4 +82,40 @@ footer {
         width: 97%;
         margin-left: 3%;
     }
+}
+
+.back-to-top {
+    clear: both;
+    display: block;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    text-align: center;
+}
+
+/* Back to top link */
+.back-to-top a {
+    color: #334C4F;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+footer {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    padding-bottom: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 60px;
+    text-align: center;
+    text-transform: none;
+    width: 100%;
+
+    color: #334C4F;
+
+    clear: both;
+    display: block;
 }

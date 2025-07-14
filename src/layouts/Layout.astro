@@ -1,6 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import SideMenu from "../components/SideMenu.astro";
+import Social from "../components/Social.astro";
 import "../styles/global.css";
 
 const { pageTitle, pageSelected } = Astro.props; // a Layout accepts a page title
@@ -24,6 +25,21 @@ const { pageTitle, pageSelected } = Astro.props; // a Layout accepts a page titl
             <main class="main-content">
                 <div class="main-buffer">
                     <slot />
+                    
+                    <!-- Back to top link -->
+                    <section class="back-to-top">
+                        <a href="#">
+                            <span>↑</span>
+                            <span>Back to Top</span>
+                        </a>
+                    </section>
+                    
+                    <!-- footer with instagram -->
+                    <footer>
+                        <Social platform="instagram" username="rainy.atelier" />
+                        <div>2025 Jenny Lin</div>
+                    </footer>
+                    
                 </div>
             </main>
         </div>
