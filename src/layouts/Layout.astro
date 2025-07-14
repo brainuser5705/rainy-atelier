@@ -19,10 +19,10 @@ const { pageTitle, pageSelected } = Astro.props; // a Layout accepts a page titl
         <title>Jenny Lin{pageTitle ? ` - ${pageTitle}` : ""}</title>
     </head>
     <body>
-        <Popup />
+        <Popup pageSelected={pageSelected} />
         <div id="landing">
-            <SideMenu pageSelected={pageSelected}/>
-            <HamburgerMenu />
+            <SideMenu pageSelected={pageSelected} />
+            <HamburgerMenu/>
             <main class="landing-content">
                 <div class="landing-buffer">
                     <slot />

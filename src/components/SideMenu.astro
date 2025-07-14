@@ -2,7 +2,7 @@
 import Navigation from './Navigation.astro';
 import Social from './Social.astro';
 
-const { pageSelected } = Astro.props
+const { pageSelected } = Astro.props;
 ---
 
 <style>
@@ -39,7 +39,7 @@ const { pageSelected } = Astro.props
     <p>welcome to my rainy atelier</p>
   </div>
   <nav>
-    <Navigation pageSelected={pageSelected} />
+    <Navigation pageSelected={pageSelected} id="sidemenu-nav"/>
   </nav>
   <Social platform="instagram" username="rainy.atelier" />
 </header>

@@ -4,32 +4,48 @@ const { id, pageSelected } = Astro.props
 
 <style>
 
-/* need to put is:global styling for the color */
+#popup-nav .nav-links {
+    text-align: center;
+    padding: 50px;
+}
 
-.group {
+#popup-nav .group {
+    margin: 0;
+    padding: 0;
+}
+
+#popup-nav li, .page-title{
+    font-size: 22px;
+    text-decoration: none;
+    padding-bottom: 30px;
+}
+
+#sidemenu-nav .group {
     list-style-type: none;
     padding-left: 0px;
 }
 
-.gallery-title {
+#sidemenu-nav .gallery-title {
     padding-bottom: 20px;
     font-size: 30px;
     font-weight: 700;
-    text-transform: uppercase;
 }
 
-.project-title {
+#sidemenu-nav .project-title {
     padding-bottom: 10px;
     font-size: 25px;
     font-weight: 600;
     text-transform: none;
 }
 
-.page-title {
+#sidemenu-nav .page-title {
     padding-bottom: 30px;
     font-size: 30px;
     font-weight: 700px;
-    text-transform: uppercase;
+}
+
+#sidemenu-nav .nav-links {
+    padding-top: 40px;
 }
 
 .active{
@@ -49,31 +65,33 @@ a:hover{
     color: #CFFFFE;
 }
 
-.nav-links {
-    padding-top: 40px;
+.upper {
+    text-transform: uppercase;
 }
 
 </style>
 
-<div class="nav-links" id=`${id}`>
-    <ul class="group">
-        <li class="gallery-title">
-            <a href="/" class:list={[{active: pageSelected == "concept"}]}>Concept / Visdev</a>
-        </li>
-        <li class="project-title">
-            <a href="/projects" class:list={[{active: pageSelected == "projects"}]}>Projects</a>
-        </li>
-        <li class="project-title">
-            <a href="/bgs" class:list={[{active: pageSelected == "bgs"}]}>Backgrounds</a>
-        </li>
-        <li class="project-title">
-            <a href="/characterdesign" class:list={[{active: pageSelected == "characterdesign"}]}>Character Design</a>
-        </li>
-    </ul>
-    <div class="page-title">
-        <a href="/personal" class:list={[{active: pageSelected == "personal"}]}>Personal</a>
-    </div>
-    <div class="page-title">
-        <a href="/contact" class:list={[{active: pageSelected == "contact"}]}>About & Contact</a>
+<div id=`${id}`>
+    <div class="nav-links">
+        <ul class="group">
+            <li class="gallery-title">
+                <a href="/" class:list={["upper", {active: pageSelected == "concept"}]}>Concept / Visdev</a>
+            </li>
+            <li class="project-title">
+                <a href="/projects" class:list={[{active: pageSelected == "projects"}]}>Projects</a>
+            </li>
+            <li class="project-title">
+                <a href="/bgs" class:list={[{active: pageSelected == "bgs"}]}>Backgrounds</a>
+            </li>
+            <li class="project-title">
+                <a href="/characterdesign" class:list={[{active: pageSelected == "characterdesign"}]}>Character Design</a>
+            </li>
+        </ul>
+        <div class="page-title">
+            <a href="/personal" class:list={["upper", {active: pageSelected == "personal"}]}>Personal</a>
+        </div>
+        <div class="page-title">
+            <a href="/contact" class:list={["upper", {active: pageSelected == "contact"}]}>About & Contact</a>
+        </div>
     </div>
 </div>

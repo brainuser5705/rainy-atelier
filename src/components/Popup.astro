@@ -1,26 +1,26 @@
 ---
-import Navigation from "./Navigation.astro"
+import Navigation from "./Navigation.astro";
+import Social from "./Social.astro";
+
+const { pageSelected } = Astro.props;
 ---
 
-<style is:global>
-    .nav-links {
-        text-align: center;
-    }
+<style>
+#landing-popup {
+    width: 100%; /* fill in the whole space */
+    height: 100%;
+    background-color: black;
+}
 
-    .nav-links a {
-        text-decoration: none;
-    }
-
-    #landing-popup {
-        width: 100%; /* fill in the whole space */
-        height: 100%;
-        background-color: black;
-    }
+footer {
+    position: sticky;
+    bottom: 0;
+}
 </style>
 
 <div id="landing-popup" class="hidden" >
- <Navigation />
+    <Navigation pageSelected={pageSelected} id="popup-nav" />
+    <!-- <footer>
+        <Social platform="instagram" username="rainy.atelier" />
+    </footer> -->
 </div>
-
-
-
