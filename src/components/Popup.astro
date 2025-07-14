@@ -1,4 +1,26 @@
 ---
+import Navigation from "./Navigation.astro"
 ---
+
+<style is:global>
+    .nav-links {
+        text-align: center;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+    }
+
+    #landing-popup {
+        width: 100%; /* fill in the whole space */
+        height: 100%;
+        background-color: black;
+    }
+</style>
+
+<div id="landing-popup" class="hidden" >
+ <Navigation />
+</div>
+
 
 

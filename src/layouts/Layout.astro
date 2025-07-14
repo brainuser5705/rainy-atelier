@@ -2,6 +2,7 @@
 import Navigation from "../components/Navigation.astro";
 import SideMenu from "../components/SideMenu.astro";
 import HamburgerMenu from "../components/HamburgerMenu.astro";
+import Popup from "../components/Popup.astro";
 import Social from "../components/Social.astro";
 import "../styles/global.css";
 
@@ -18,9 +19,7 @@ const { pageTitle, pageSelected } = Astro.props; // a Layout accepts a page titl
         <title>Jenny Lin{pageTitle ? ` - ${pageTitle}` : ""}</title>
     </head>
     <body>
-        <div id="landing-popup" class="hidden">
-            <Navigation />
-        </div>
+        <Popup />
         <div id="landing">
             <SideMenu pageSelected={pageSelected}/>
             <HamburgerMenu />
