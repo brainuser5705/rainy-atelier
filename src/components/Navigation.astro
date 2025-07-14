@@ -1,7 +1,7 @@
 ---
 const { id, pageSelected } = Astro.props
 ---
-<style>
+<!-- <style>
 
 a {
     display: block; /* for the padding to render */
@@ -39,14 +39,86 @@ a {
     color: #FFF199;
 }
 
+</style> -->
+
+<style>
+
+.group {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.gallery-title {
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.project-title {
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.page-title {
+    padding-bottom: 30px;
+    font-size: 30px;
+    font-weight: 700px;
+    text-transform: uppercase;
+}
+
+.active{
+    color: #FFF199;
+}
+
+.active:hover{
+    color: #FFF199;
+}
+
+/* default color */
+a {
+    color: #eee;
+}
+
+a:hover{
+    color: #CFFFFE;
+}
+
+.nav-links {
+    padding-top: 40px;
+}
+
 </style>
+
 <div class="nav-links" id=`${id}`>
-    <div class="nav-links-group">
+    <ul class="group">
+        <li class="gallery-title">
+            <a href="/" class:list={[{active: pageSelected == "concept"}]}>Concept / Visdev</a>
+        </li>
+        <li class="project-title">
+            <a href="/projects" class:list={[{active: pageSelected == "projects"}]}>Projects</a>
+        </li>
+        <li class="project-title">
+            <a href="/bgs" class:list={[{active: pageSelected == "bgs"}]}>Backgrounds</a>
+        </li>
+        <li class="project-title">
+            <a href="/characterdesign" class:list={[{active: pageSelected == "characterdesign"}]}>Character Design</a>
+        </li>
+    </ul>
+    <div class="page-title">
+        <a href="/personal" class:list={[{active: pageSelected == "personal"}]}>Personal</a>
+    </div>
+    <div class="page-title">
+        <a href="/contact" class:list={[{active: pageSelected == "contact"}]}>About & Contact</a>
+    </div>
+    <!-- <div class="nav-links-group">
         <a href="/" id="concept" class:list={["category", {active: pageSelected == "concept"}]}>Concept / Visdev</a>
         <a href="/projects" id="projects" class:list={["page", {active: pageSelected == "projects"}]}>Projects</a>
         <a href="/bgs" id="backgrounds" class:list={["page", {active: pageSelected == "bgs"}]}>Backgrounds</a>
         <a href="/characterdesign" id="characterdesign" class:list={["page", {active: pageSelected == "characterdesign"}]}>Character Design</a>
     </div>
     <a href="/personal" id="personal" class:list={["category", {active: pageSelected == "personal"}]}>Personal</a>
-    <a href="/contact" id="about" class:list={["category", {active: pageSelected == "contact"}]}>About & Contact</a>
+    <a href="/contact" id="about" class:list={["category", {active: pageSelected == "contact"}]}>About & Contact</a> -->
 </div>
