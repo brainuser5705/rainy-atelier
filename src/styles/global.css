@@ -53,7 +53,11 @@ footer {
         display: block; 
     }
     
-    #main-navigation {
+    .main-navigation {
+        display: none;
+    }
+
+    .main-content {
         display: none;
     }
 }
@@ -63,8 +67,14 @@ footer {
     .hamburger {
         display: none; 
     }
-}
 
-h1 {
-    margin: 0;
+    .main-navigation {
+        display: initial;
+    }
+
+    .main-content {
+        float: left;
+        display: block;
+        width: 85%;
+    }
 }

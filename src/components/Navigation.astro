@@ -1,45 +1,6 @@
 ---
 const { id, pageSelected } = Astro.props
 ---
-<!-- <style>
-
-a {
-    display: block; /* for the padding to render */
-    color: white;
-    line-height: 20px;
-}
-
-.category {
-    font-size: 30px;
-    text-transform: uppercase;
-    padding-bottom: 20px;
-}
-
-.nav-links-group {
-    padding-bottom: 30px;
-    padding-top: 0px;
-}
-
-.nav-links-group .category {
-    padding-bottom: 20px;
-}
-
-.nav-links-group .page {
-    font-size: 20px;
-    padding-bottom: 10px;
-    padding-top: 0px;
-}
-
-.active{
-    color: #FFF199;
-    font-weight: 700px;
-}
-
-.active:hover{
-    color: #FFF199;
-}
-
-</style> -->
 
 <style>
 
@@ -113,12 +74,4 @@ a:hover{
     <div class="page-title">
         <a href="/contact" class:list={[{active: pageSelected == "contact"}]}>About & Contact</a>
     </div>
-    <!-- <div class="nav-links-group">
-        <a href="/" id="concept" class:list={["category", {active: pageSelected == "concept"}]}>Concept / Visdev</a>
-        <a href="/projects" id="projects" class:list={["page", {active: pageSelected == "projects"}]}>Projects</a>
-        <a href="/bgs" id="backgrounds" class:list={["page", {active: pageSelected == "bgs"}]}>Backgrounds</a>
-        <a href="/characterdesign" id="characterdesign" class:list={["page", {active: pageSelected == "characterdesign"}]}>Character Design</a>
-    </div>
-    <a href="/personal" id="personal" class:list={["category", {active: pageSelected == "personal"}]}>Personal</a>
-    <a href="/contact" id="about" class:list={["category", {active: pageSelected == "contact"}]}>About & Contact</a> -->
 </div>
