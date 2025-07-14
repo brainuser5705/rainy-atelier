@@ -1,6 +1,6 @@
 ---
 import Navigation from "./Navigation.astro";
-import Social from "./Social.astro";
+import Closeable from "./Closeable";
 
 const { pageSelected } = Astro.props;
 ---
@@ -19,6 +19,9 @@ footer {
 </style>
 
 <div id="landing-popup" class="hidden" >
+    <Closeable client:visible id_list={["landing-popup", "landing", "hamburger"]}>
+        X
+    </Closeable>
     <Navigation pageSelected={pageSelected} id="popup-nav" />
     <!-- <footer>
         <Social platform="instagram" username="rainy.atelier" />

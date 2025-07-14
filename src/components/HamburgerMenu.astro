@@ -1,4 +1,5 @@
 ---
+import Closeable from "./Closeable"
 ---
 
 <style>
@@ -14,15 +15,12 @@
         max-width: 100%;
     }
 
-    .hamburger {
+    #hamburger {
         width: 30px;
         cursor: pointer;
-        position: absolute;
-        right: 5%;
-        top: 60px;
     }
 
-    .hamburger .line {
+    #hamburger .line {
         display: block;
         height: 4px;
         margin-bottom: 4px;
@@ -37,10 +35,13 @@
         <img src="/assets/logo.png" id="hamburger-logo" alt="Logo">
     </a>
     <!-- hamburger icon -->
-    <div class="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-    </div>
+    <Closeable client:visible id_list={["landing-popup", "landing", "hamburger"]}>
+        <div id="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </Closeable>
+    
 </header>
 

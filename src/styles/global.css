@@ -107,3 +107,11 @@ footer {
 .hidden {
     display: none !important;
 }
+
+.closeable {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
