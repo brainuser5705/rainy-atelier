@@ -30,12 +30,12 @@ footer {
 }
 
 /* navigation styles */
-.hamburger {
+#hamburger {
     width: 30px;
     cursor: pointer;
 }
 
-.hamburger .line {
+#hamburger .line {
     display: block;
     height: 4px;
     margin-bottom: 4px;
@@ -44,22 +44,19 @@ footer {
 
 /* show the hamburger and hide navbar on small screens */
 @media screen and (max-width: 931px) {
-    .hamburger {
+    #hamburger {
         display: block; 
     }
     
     nav {
         display: none;
     }
-
-    .landing-content {
-        display: none;
-    }
+    
 }
 
 /* show the navbar on large screens */
 @media screen and (min-width: 932px) {
-    .hamburger {
+    #hamburger {
         display: none; 
     }
 
