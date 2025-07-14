@@ -1,10 +1,7 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import Section from "../components/Section.astro";
+import Layout from "../layouts/Layout.astro";
+import SectionHeader from "../components/SectionHeader.astro";
 ---
-<MainLayout pageSelected="projects" pageTitle="Projects">
-    <Section heading="Projects">
-        <h2>Senior Thesis</h2>
-        <h2>Junior Thesis</h2>
-    </Section>
-</MainLayout>
+<Layout pageSelected="projects" pageTitle="Projects">
+    <SectionHeader heading="Projects" />
+</Layout>

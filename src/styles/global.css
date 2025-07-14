@@ -77,4 +77,9 @@ footer {
         display: block;
         width: 85%;
     }
+
+    .main-buffer {
+        width: 97%;
+        margin-left: 3%;
+    }
 }

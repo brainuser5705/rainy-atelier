@@ -1,26 +1,26 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import Section from "../components/Section.astro";
+import Layout from "../layouts/Layout.astro";
+import SectionHeader from "../components/SectionHeader.astro";
 ---
 
-<MainLayout pageSelected="contact" pageTitle="About & Contact">
-    <Section heading="About">
+<Layout pageSelected="contact" pageTitle="About & Contact">
+    <SectionHeader heading="About" />
+    <p>
         Hi, I'm Jenny! I'm a New York-based illustrator and aspiring concept designer/visual development artist. I'm currently studying towards a BFA in Illustration at the School of Visual Arts.
         <br>
         (Something I love almost as much as telling stories with my art is rainy days and cereal.)​​​​​​​
-    </Section>
-    <Section heading="Contact">
-        <div>
-            Feel free to contact me for any further inquiries at: <u><b>lin.jenny101@gmail.com</b></u>
-        </div>
-        <form>
-            <label for="contact-name">Name *</label>
-            <input type="text" id="contact-name" placeholder="Your Name...">
-            <label for="contact-email">Email Address *</label>
-            <input type="email" id="contact-name" placeholder="Your Email Address...">
-            <label for="contact-name">Message *</label>
-            <textarea id="contact-name" placeholder="Your Message..."></textarea>
-            <input type="submit">
-        </form>
-    </Section>
-</MainLayout>
+    </p>
+    <SectionHeader heading="Contact" />
+    <div>
+        Feel free to contact me for any further inquiries at: <u><b>lin.jenny101@gmail.com</b></u>
+    </div>
+    <form>
+        <label for="contact-name">Name *</label>
+        <input type="text" id="contact-name" placeholder="Your Name...">
+        <label for="contact-email">Email Address *</label>
+        <input type="email" id="contact-name" placeholder="Your Email Address...">
+        <label for="contact-name">Message *</label>
+        <textarea id="contact-name" placeholder="Your Message..."></textarea>
+        <input type="submit">
+    </form>
+</Layout>
