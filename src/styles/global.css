@@ -29,26 +29,13 @@ footer {
     padding: 1rem;
 }
 
-/* navigation styles */
-#hamburger {
-    width: 30px;
-    cursor: pointer;
-}
-
-#hamburger .line {
-    display: block;
-    height: 4px;
-    margin-bottom: 4px;
-    background-color: #334C4F;
-}
-
 /* show the hamburger and hide navbar on small screens */
 @media screen and (max-width: 931px) {
-    #hamburger {
+    .hamburger-menu {
         display: block; 
     }
     
-    nav {
+    .sidemenu {
         display: none;
     }
     
@@ -56,11 +43,11 @@ footer {
 
 /* show the navbar on large screens */
 @media screen and (min-width: 932px) {
-    #hamburger {
+    .hamburger-menu {
         display: none; 
     }
 
-    nav {
+    .sidemenu {
         display: initial;
     }
 

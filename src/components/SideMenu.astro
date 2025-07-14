@@ -1,12 +1,38 @@
 ---
 import Navigation from './Navigation.astro';
 import Social from './Social.astro';
-import "../styles/sidemenu.css";
 
 const { pageSelected } = Astro.props
 ---
+
+<style>
+.sidemenu {
+  width: 11%;
+  margin-right: 4%;
+  float: left;
+}
+
+.side-logo {
+  color: #CFFFFE;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.side-logo img {
+  max-width: 100%;
+}
+
+.side-logo p {
+  /* font-size: 21px; */
+  font-weight: 600;
+  padding-top: 20px;
+  margin: 0;
+  text-align: center;
+}
+</style>
+
 <header class="sidemenu">
-  <div class="nav-logo">
+  <div class="side-logo">
     <a href="/">
         <img src="/assets/logo.png" alt="Logo" />
     </a>
