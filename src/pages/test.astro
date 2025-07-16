@@ -1,0 +1,29 @@
+---
+import fetchApi from '../lib/strapi';
+import type Category from '../interfaces/category';
+
+const categories = await fetchApi<Category[]>({
+    endpoint: 'categories?populate=*',
+    wrappedByKey: 'data'
+});
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Strapi & Astro</title>
+  </head>
+
+  <body>
+    {
+        categories.map((category) => (
+            <div> { category.name } </div>
+            <div> { category.id } </div>
+            <div>
+                { category.cover_piece && <img src={`http://localhost:1337${category.cover_piece.url}`} /> }
+            </div>
+        ))
+    }
+  </body>
+</html>
+
