@@ -27,7 +27,7 @@ async function fetchApi<T>({
         endpoint = endpoint.slice(1);
     }
 
-    const url = new URL(`${import.meta.env.STRAPI_API_URL}/${endpoint}`);
+    const url = new URL(`${import.meta.env.STRAPI_URL}/api/${endpoint}`);
 
     if (query) {
         Object.entries(query).forEach(([key, value]) => {
