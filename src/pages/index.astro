@@ -2,9 +2,18 @@
 import Layout from '../layouts/Layout.astro'
 import "../styles/global.css";
 
+import { getCategories } from '../lib/wrapper';
+
+const categories = await getCategories();
+
 ---
 <Layout pageSelected="concept">
-	<h1>first</h1>
-	<h1>second</h1>
-	<h1>third</h1>
+	{
+		categories.map((category) => (
+			<div class="landing-category-selection">
+				<img src={`${import.meta.env.STRAPI_API_URL}${category.cover_piece.url}`} height="200" />
+				<div>{category.name}</div>
+			</div>
+		))
+	}
 </Layout>
