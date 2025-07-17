@@ -2,14 +2,11 @@
 import Layout from '../layouts/Layout.astro'
 import "../styles/global.css";
 
-<<<<<<< Updated upstream
-=======
 import { getCategories } from '../lib/wrapper';
 import STRAPI_URL from '../lib/env';
 
 const categories = await getCategories();
 const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
->>>>>>> Stashed changes
 ---
 
 <style>
