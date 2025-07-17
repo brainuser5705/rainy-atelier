@@ -2,9 +2,20 @@
 import Layout from '../layouts/Layout.astro'
 import "../styles/global.css";
 
+import { getCategories } from '../lib/wrapper';
+import STRAPI_URL from '../lib/env';
+
+const categories = await getCategories();
+const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
+
 ---
 <Layout pageSelected="concept">
-	<h1>first</h1>
-	<h1>second</h1>
-	<h1>third</h1>
+	{
+		categories.map((category) => (
+			<div class="landing-category-selection">
+				<img src={`${img_prefix}${category.cover_piece.url}`} height="200" />
+				<div>{category.name}</div>
+			</div>
+		))
+	}
 </Layout>
