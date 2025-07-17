@@ -11,7 +11,7 @@ const categories = await getCategories();
 	{
 		categories.map((category) => (
 			<div class="landing-category-selection">
-				<img src={`${import.meta.env.STRAPI_URL}${category.cover_piece.url}`} height="200" />
+				<img src={`${category.cover_piece.url}`} height="200" />
 				<div>{category.name}</div>
 			</div>
 		))
