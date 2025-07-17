@@ -1,8 +1,11 @@
+import type Grid from './grid.ts';
+
 export default interface Category {
-    id: number;
     name: string;
+    path: string;
+    showing_on_landing: boolean;
     cover_piece: {
-        name: string;
         url: string;
-    }
+    };
+    grids: Grid[];
 }

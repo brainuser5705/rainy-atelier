@@ -1,11 +1,8 @@
 ---
-import fetchApi from '../lib/strapi';
-import type Category from '../interfaces/category';
+import { getCategories, getGridsFromCategory, getPiecesFromGrid } from '../lib/wrapper';
 
-const categories = await fetchApi<Category[]>({
-    endpoint: 'categories?populate=*',
-    wrappedByKey: 'data'
-});
+const pieces = await getPiecesFromGrid("personal");
+
 ---
 
 <!DOCTYPE html>
@@ -15,15 +12,22 @@ const categories = await fetchApi<Category[]>({
   </head>
 
   <body>
-    {
+    <!-- {
         categories.map((category) => (
             <div> { category.name } </div>
-            <div> { category.id } </div>
             <div>
                 { category.cover_piece && <img src={`http://localhost:1337${category.cover_piece.url}`} /> }
             </div>
         ))
+    } -->
+
+    {
+      pieces.map((piece) => (
+        <div>Piece url: { piece.url }</div>
+        <img height="200" src={`http://localhost:1337${piece.url}`} />
+      ))
     }
+    
   </body>
 </html>
 
