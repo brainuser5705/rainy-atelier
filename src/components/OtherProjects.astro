@@ -1,24 +1,60 @@
 ---
-const { currPath } = Astro.props;
-
+import Category from './Category.astro';
 import { getCategories } from '../lib/wrapper';
 import STRAPI_URL from '../lib/env';
+
+const { currPath } = Astro.props;
 
 const categories = await getCategories();
 const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
 ---
 
 <style>
-    .other-projects {
-        display: block;
+
+    /* All CSS for elements that are not in Category */
+
+    h1 {
         width: 100%;
+        text-align: center;
+        color: #eee;
+        font-family: ftnk;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        margin-bottom: 30px;
+        margin-top: 0px;
+        text-transform: uppercase;
+    }
+
+    .other-projects {
         padding-bottom: 0px;
         padding-top: 60px;
     }
+
+    /* grid */
+    .other-projects-categories {
+        display: grid;
+        grid-template-columns: repeat(4, 25%); /* 4 columns */
+        gap: 1%;
+    }
+
 </style>
 
 <section class="other-projects">
-    <div>
-        YOU MAY ALSO LIKE
+    <h1>You may also like</h1>
+    <div class="other-projects-categories">
+        {
+            categories.map((category) => {
+                if (category.path != currPath ) {
+                    return <Category
+                        container="other-projects"
+                        path={`${category.path}`}
+						cover_piece_url={`${img_prefix}${category.cover_piece.url}`}
+						name={category.name}
+                    />
+                }
+            })
+        }
     </div>
 </section>

@@ -5,36 +5,18 @@ import "../styles/global.css";
 
 import { getCategories } from '../lib/wrapper';
 import STRAPI_URL from '../lib/env';
+import OtherProjects from '../components/OtherProjects.astro';
 
 const categories = await getCategories();
 const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
 ---
 
-<style is:global>
+<style>
 
 	.landing-category {
 		padding-top: 40px;
 		display: flex;
 		flex-wrap: wrap;
-	}
-
-	@media screen and (min-width: 540px) {
-		
-		.category-selection {
-			width: 49%;
-			margin-right: 1%;
-			margin-bottom: 4%;
-		}
-
-	}
-
-	@media screen and (max-width: 541px) {
-
-		.category-selection {
-			width: 100%;
-			margin-bottom: 4%;
-		}
-		
 	}
 
 </style>
@@ -45,6 +27,7 @@ const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
 			{ 
 				categories.map((category) => (
 					<Category
+						container="landing"
 						path={`${category.path}`}
 						cover_piece_url={`${img_prefix}${category.cover_piece.url}`}
 						name={category.name}
@@ -52,6 +35,5 @@ const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
 				))
 			}
 		</section>
-		
 	}
 </Layout>
