@@ -1,0 +1,43 @@
+---
+const { path, cover_piece_url, name } = Astro.props;
+---
+
+<style>
+
+	a {
+		display: inline-block;
+		height: 100%;
+		text-decoration: none;
+	}
+
+	a:visited {
+		text-decoration: none;
+		color: #eee;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.landing-category .category-name {
+		color: #eee;
+		float: left;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 600;
+		padding-bottom: 9.5%;
+		padding-top: 4%;
+		text-align: left;
+		text-transform: none;
+		width: 90%;
+	}
+
+</style>
+
+<div class="category-selection">
+    <a href={`${path}`}>
+        <img src={`${cover_piece_url}`} />
+        <div class="category-name">{name}</div>
+    </a>
+</div>
