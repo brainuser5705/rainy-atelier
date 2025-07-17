@@ -1,5 +1,6 @@
 import type Category from '../interfaces/category';
 import type Grid from '../interfaces/grid';
+import STRAPI_URL from '../lib/env';
 
 interface Props {
     endpoint: string;
@@ -27,7 +28,7 @@ async function fetchApi<T>({
         endpoint = endpoint.slice(1);
     }
 
-    const url = new URL(`${import.meta.env.STRAPI_URL}/api/${endpoint}`);
+    const url = new URL(`${STRAPI_URL}/api/${endpoint}`);
 
     if (query) {
         Object.entries(query).forEach(([key, value]) => {
