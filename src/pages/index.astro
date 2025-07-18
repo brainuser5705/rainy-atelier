@@ -24,7 +24,7 @@ const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
 	{
 		<section class="landing-category">
 			{ 
-				categories.map((category) => (
+				categories && categories.map((category) => (
 					<Category
 						container="landing"
 						path={`${category.path}`}

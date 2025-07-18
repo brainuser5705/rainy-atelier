@@ -12,7 +12,7 @@ const grids = await getGridsFromCategory(PATH);
 <Layout pageSelected=PATH pageTitle="Projects">
     <SectionHeader heading="Projects" />
     {
-        grids.map(async (grid) => {
+        grids && grids.map(async (grid) => {
             return ( 
                 <div>
                     <h1>{grid.heading}</h1>

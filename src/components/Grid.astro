@@ -24,7 +24,7 @@ const pieces = await getPiecesFromGrid(grid_id);
 
 <div class="grid">
     {
-        pieces.map((piece) => {
+        pieces && pieces.map((piece) => {
             return <img src={`${img_prefix}${piece.url}`} />
         })
     }
