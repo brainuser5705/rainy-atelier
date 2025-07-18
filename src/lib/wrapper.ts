@@ -74,7 +74,7 @@ export function getCategories(): Promise<Category[]> {
 export async function getGridsFromCategory(path: string) : Promise<Grid[]>{
     const category : Category = await fetchApi<Category>({
         endpoint: 'categories',
-        query: { 'path': path, 'populate': 'grids' },
+        query: { 'filters[path][$eq]': path, 'populate': 'grids' },
         wrappedByKey: 'data',
         wrappedByList: true
     });
@@ -86,10 +86,10 @@ export async function getGridsFromCategory(path: string) : Promise<Grid[]>{
  * @param grid_name the name of the grid to get pieces from
  * @returns 
  */
-export async function getPiecesFromGrid(grid_name: string) {
+export async function getPiecesFromGrid(grid_id: string) {
     const grid : Grid = await fetchApi<Grid>({
         endpoint: 'grids',
-        query: { 'name': grid_name, 'populate': 'pieces'},
+        query: { 'filters[grid_id][$eq]': grid_id, 'populate': 'pieces'},
         wrappedByKey: 'data',
         wrappedByList: true
     });

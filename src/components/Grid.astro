@@ -1,6 +1,31 @@
 ---
+import STRAPI_URL from '../lib/env';
+import { getPiecesFromGrid } from '../lib/wrapper';
+
+const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
+
+const { num_rows, num_cols, grid_id } = Astro.props;
+
+const pieces = await getPiecesFromGrid(grid_id);
 ---
 
-<div>
+<style define:vars={{ num_rows, num_cols }}>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(var(--num_cols), auto);
+        grid-template-rows: repeat(var(--num_rows), auto);
+    }
 
+    .grid img {
+        width: 100%;
+    }
+
+</style>
+
+<div class="grid">
+    {
+        pieces.map((piece) => {
+            return <img src={`${img_prefix}${piece.url}`} />
+        })
+    }
 </div>

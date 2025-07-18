@@ -1,6 +1,7 @@
 export default interface Grid {
-    name: string;
+    grid_id: string;
     pieces: ({ url: string; })[]
     num_rows: number;
     num_cols: number;
+    heading: string;
 }
