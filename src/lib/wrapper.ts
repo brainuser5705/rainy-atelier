@@ -39,17 +39,22 @@ async function fetchApi<T>({
     console.log(url.toString());
 
     const res = await fetch(url.toString());
-    let data = await res.json();
+    
+    if (res.status == 200) {
+        let data = await res.json();
 
-    if (wrappedByKey) {
-        data = data[wrappedByKey];
+        if (wrappedByKey) {
+            data = data[wrappedByKey];
+        }
+
+        if (wrappedByList) {
+            data = data[0];
+        }
+
+        return data as T;
     }
 
-    if (wrappedByList) {
-        data = data[0];
-    }
-
-    return data as T;
+    return null as T; 
 
 }
 
@@ -71,14 +76,14 @@ export function getCategories(): Promise<Category[]> {
  * @param path the Astro path of the category
  * @returns 
  */
-export async function getGridsFromCategory(path: string) : Promise<Grid[]>{
+export async function getGridsFromCategory(path: string) : Promise<Grid[] | null> {
     const category : Category = await fetchApi<Category>({
         endpoint: 'categories',
         query: { 'filters[path][$eq]': path, 'populate': 'grids' },
         wrappedByKey: 'data',
         wrappedByList: true
     });
-    return category.grids;
+    return category ? category.grids : null;
 }
 
 /**
@@ -93,5 +98,5 @@ export async function getPiecesFromGrid(grid_id: string) {
         wrappedByKey: 'data',
         wrappedByList: true
     });
-    return grid.pieces;
+    return grid ? grid.pieces : null;
 }
