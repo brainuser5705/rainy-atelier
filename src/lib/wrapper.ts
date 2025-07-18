@@ -9,6 +9,27 @@ interface Props {
     wrappedByList?: boolean;
 }
 
+export async function testFetchApi({
+    endpoint,
+    query
+}: Props): Promise<string> {
+
+    if (endpoint.startsWith('/')) {
+        endpoint = endpoint.slice(1);
+    }
+
+    const url = new URL(`${STRAPI_URL}/api/${endpoint}`);
+
+    if (query) {
+        Object.entries(query).forEach(([key, value]) => {
+            url.searchParams.append(key, value);
+        });
+    }
+
+    return url.toString();
+
+}
+
 /**
  * Fetches data from the Strapi API
  * @param endpoint - The endpoint to fetch from

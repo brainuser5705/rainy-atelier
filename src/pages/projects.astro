@@ -3,17 +3,20 @@ import Layout from "../layouts/Layout.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import Grid from "../components/Grid.astro";
 import OtherProjects from "../components/OtherProjects.astro";
-import { getGridsFromCategory } from "../lib/wrapper";
+import { getGridsFromCategory, testFetchApi } from "../lib/wrapper";
 
 const PATH = "projects";
 const grids = await getGridsFromCategory(PATH);
 
+const gridURL = await testFetchApi({
+        endpoint: 'categories',
+        query: { 'filters[path][$eq]': PATH, 'populate': 'grids' },
+    });
+
 ---
 <Layout pageSelected=PATH pageTitle="Projects">
     <SectionHeader heading="Projects" />
-    {
-        grids && grids[0].heading
-    }
+    <div>Testing: { grids == null }, { gridURL }</div>
     {
         grids && grids.map(async (grid) => {
             return ( 
