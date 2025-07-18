@@ -1,5 +1,5 @@
 ---
-import { STRAPI_URL } from '../lib/env';
+import { STRAPI_URL, BASE_URL } from '../lib/env';
 
 const { container, path, cover_piece_url, name } = Astro.props;
 ---
@@ -82,7 +82,7 @@ const { container, path, cover_piece_url, name } = Astro.props;
 </style>
 
 <div class={`${container} category-selection`}>
-	<a href={`${path}`}>
+	<a href={`${BASE_URL}/${path}`}>
 		<img src={`${cover_piece_url}`} />
 		<div class="category-name">{name}</div>
 	</a>
