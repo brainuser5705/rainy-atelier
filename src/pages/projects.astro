@@ -2,7 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import Grid from "../components/Grid.astro";
-import { getGridsFromCategory, getPiecesFromGrid } from "../lib/wrapper";
+import OtherProjects from "../components/OtherProjects.astro";
+import { getGridsFromCategory } from "../lib/wrapper";
 
 const PATH = "projects";
 const grids = await getGridsFromCategory(PATH);
@@ -19,4 +20,5 @@ const grids = await getGridsFromCategory(PATH);
                 </div> )
         })
     }
+    <OtherProjects currPath="bgs"/>
 </Layout>
