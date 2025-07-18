@@ -4,7 +4,7 @@ import Category from '../components/Category.astro';
 import "../styles/global.css";
 
 import { getCategories } from '../lib/wrapper';
-import STRAPI_URL from '../lib/env';
+import { STRAPI_URL } from '../lib/env';
 
 const categories = await getCategories();
 const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";

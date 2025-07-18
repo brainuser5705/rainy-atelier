@@ -1,6 +1,6 @@
 import type Category from '../interfaces/category';
 import type Grid from '../interfaces/grid';
-import STRAPI_URL from '../lib/env';
+import { STRAPI_URL } from '../lib/env';
 
 interface Props {
     endpoint: string;
