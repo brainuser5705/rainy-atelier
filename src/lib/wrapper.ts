@@ -36,8 +36,6 @@ async function fetchApi<T>({
         });
     }
 
-    console.log(url.toString());
-
     const res = await fetch(url.toString());
     
     if (res.status == 200) {
