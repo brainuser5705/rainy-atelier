@@ -16,7 +16,6 @@ const gridURL = await testFetchApi({
 ---
 <Layout pageSelected=PATH pageTitle="Projects">
     <SectionHeader heading="Projects" />
-    <div>Testing: { grids == null }, { gridURL }</div>
     {
         grids && grids.map(async (grid) => {
             return ( 

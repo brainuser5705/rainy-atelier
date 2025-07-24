@@ -56,3 +56,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ## Notes
 
 - Dynamically generate the pages using categories instead of Astro files.
+- Server islands to dynamically fetch content
+- If not server, then use testing code to figure it out.
+- Yellow highlighting not working for all pages
+- Link to go back up does not work

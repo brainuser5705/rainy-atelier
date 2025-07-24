@@ -1,8 +1,6 @@
 ---
-import { STRAPI_URL } from '../lib/env';
+import { IMG_URL_PREFIX } from '../lib/env';
 import { getPiecesFromGrid } from '../lib/wrapper';
-
-const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
 
 const { num_rows, num_cols, grid_id } = Astro.props;
 
@@ -25,7 +23,7 @@ const pieces = await getPiecesFromGrid(grid_id);
 <div class="grid">
     {
         pieces && pieces.map((piece) => {
-            return <img src={`${img_prefix}${piece.url}`} />
+            return <img src={`${IMG_URL_PREFIX}${piece.url}`} />
         })
     }
 </div>

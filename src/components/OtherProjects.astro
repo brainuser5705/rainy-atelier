@@ -1,12 +1,11 @@
 ---
 import Category from './Category.astro';
 import { getCategories } from '../lib/wrapper';
-import { STRAPI_URL } from '../lib/env';
+import { IMG_URL_PREFIX } from '../lib/env';
 
 const { currPath } = Astro.props;
 
 const categories = await getCategories();
-const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
 ---
 
 <style>
@@ -50,7 +49,7 @@ const img_prefix = import.meta.env.LOCAL ? STRAPI_URL : "";
                     return <Category
                         container="other-projects"
                         path={`${category.path}`}
-						cover_piece_url={`${img_prefix}${category.cover_piece.url}`}
+						cover_piece_url={`${IMG_URL_PREFIX}${category.cover_piece.url}`}
 						name={category.name}
                     />
                 }
