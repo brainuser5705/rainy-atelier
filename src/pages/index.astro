@@ -25,6 +25,7 @@ const categories = await getCategories();
 			{ 
 				categories && categories.map((category) => (
 					<Category
+						server:defer
 						container="landing"
 						path={`${category.path}`}
 						cover_piece_url={`${IMG_URL_PREFIX}${category.cover_piece.url}`}
