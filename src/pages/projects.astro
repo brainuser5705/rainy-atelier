@@ -1,4 +1,5 @@
 ---
+export const prerender = false;
 import Layout from "../layouts/Layout.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import Grid from "../components/Grid.astro";
@@ -21,7 +22,7 @@ const gridURL = await testFetchApi({
             return ( 
                 <div>
                     <h1>{grid.heading}</h1>
-                    <Grid server:defer grid_id={grid.grid_id} num_rows={grid.num_rows} num_cols={grid.num_cols} />
+                    <Grid grid_id={grid.grid_id} num_rows={grid.num_rows} num_cols={grid.num_cols} />
                 </div> )
         })
     }
