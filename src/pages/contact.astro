@@ -16,8 +16,11 @@ import SectionHeader from "../components/SectionHeader.astro";
         margin: 0 auto;
     }
 
+    img:hover {
+        cursor: zoom-in;
+    }
+
     div {
-        display: block;
         text-align: center;
     }
 
@@ -34,8 +37,57 @@ import SectionHeader from "../components/SectionHeader.astro";
         line-height: 40px;
     }
 
-    .form-input {
+    .form-input label {
         display: block;
+        text-align: left;
+        margin-bottom: 5px;
+        margin-right: auto;
+        color: #CFFFFE;
+        font-style: italic;
+    }
+    
+    .form-input input, textarea {
+        background-color: white;
+        border: none;
+        color: #333333;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        width: 500px;
+        margin-bottom: 20px;
+        padding: 10px 8px;
+        border-radius: 5px;
+    }
+
+    .form-module {
+        float: none;
+        margin-bottom: 40px;
+        margin-top: 60px;
+        max-width: 500px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    textarea {
+        height: 132px;
+    }
+
+    #submit-button {
+        display: flex;
+        color: white;
+        background-color: #333333;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        line-height: 40px;
+        height: 40px;
+        padding: 0px 30px;
+        font-size: 15px;
+    }
+
+    #submit-button:hover {
+        font-style: italic;
     }
 
 </style>
@@ -58,19 +110,21 @@ import SectionHeader from "../components/SectionHeader.astro";
             <br>
             <span><u><b>lin.jenny101@gmail.com</b></u></span>
         </div>
-        <form>
-            <div class="form-input">
-                <label for="contact-name">Name *</label>
-                <input type="text" id="contact-name" placeholder="Your Name...">
-            </div>
-            <div class="form-input">
-                <label for="contact-email">Email Address *</label>
-                <input type="email" id="contact-name" placeholder="Your Email Address...">
-            </div>
-            <div class="form-input">
-                <label for="contact-name">Message *</label>
-                <textarea id="contact-name" placeholder="Your Message..."></textarea>
-            </div>
-            <input type="submit">
-        </form>
+        <div class="form-module">
+            <form>
+                <div class="form-input">
+                    <label for="contact-name">Name *</label>
+                    <input type="text" id="contact-name" placeholder="Your Name..." required>
+                </div>
+                <div class="form-input">
+                    <label for="contact-email">Email Address *</label>
+                    <input type="email" id="contact-name" placeholder="Your Email Address..." required>
+                </div>
+                <div class="form-input">
+                    <label for="contact-name">Message *</label>
+                    <textarea id="contact-name" placeholder="Your Message..." required></textarea>
+                </div>
+                <input id="submit-button" type="submit">
+            </form>
+        </div>
 </Layout>
