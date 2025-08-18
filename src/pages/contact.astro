@@ -90,6 +90,10 @@ import SectionHeader from "../components/SectionHeader.astro";
         font-style: italic;
     }
 
+    .form-error {
+        color: red;
+    }
+
 </style>
 
 <Layout pageSelected="contact" pageTitle="About & Contact">
@@ -115,14 +119,17 @@ import SectionHeader from "../components/SectionHeader.astro";
                 <div class="form-input">
                     <label for="contact-name">Name *</label>
                     <input type="text" id="contact-name" placeholder="Your Name..." required>
+                    <div class="form-error">This field is required</div>
                 </div>
                 <div class="form-input">
                     <label for="contact-email">Email Address *</label>
                     <input type="email" id="contact-name" placeholder="Your Email Address..." required>
+                    <div class="form-error">This field is required</div>
                 </div>
                 <div class="form-input">
                     <label for="contact-name">Message *</label>
                     <textarea id="contact-name" placeholder="Your Message..." required></textarea>
+                    <div class="form-error">This field is required</div>
                 </div>
                 <input id="submit-button" type="submit">
             </form>
